@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     let button : UIButton = {
         let b = UIButton(type: UIButtonType.system)
         let image = UIImage(named: "moonIcon")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        // b.backgroundColor = .green
         b.translatesAutoresizingMaskIntoConstraints = false
         b.setImage(image, for: UIControlState.normal)
         b.addTarget(self, action: #selector(changeColor), for: UIControlEvents.touchUpInside)
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        addGradientEffect(targetView: view)
         setupViews()
         
         

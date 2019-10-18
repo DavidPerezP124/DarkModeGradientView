@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     func changeColor(){
         print("touched")
         
-        if on == true {
+        if on {
             let animateColor = CABasicAnimation(keyPath: "colors")
             animateColor.duration = 0.5
             animateColor.toValue = [GradientColors().darkPurple, GradientColors().midPurple, GradientColors().darkBlue]
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
             animateColor.isRemovedOnCompletion = false
             gradient.add(animateColor, forKey: "hello")
             on = false
-        } else if on == false {
+        } else if !on {
             let animateColor = CABasicAnimation(keyPath: "colors")
             animateColor.duration = 0.5
             animateColor.fromValue = [GradientColors().darkPurple, GradientColors().midPurple, GradientColors().darkBlue]
